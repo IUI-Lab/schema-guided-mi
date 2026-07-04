@@ -1,0 +1,1059 @@
+--- Examples ---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [],
+"problem_and_trouble_links": [],
+"experience_frames": [],
+"improvement_plan": []
+}
+
+### Utterance
+Counselor: I'm sure there's so many other places you'd rather be than here today talking with me, but, um, you're here, and, um, thank you.
+Client: Okay.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [],
+"problem_and_trouble_links": [],
+"experience_frames": [],
+"improvement_plan": []
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [],
+"problem_and_trouble_links": [],
+"experience_frames": [],
+"improvement_plan": []
+}
+
+### Utterance
+Counselor: -um, we-we're-- You're here probably because of your speeding ticket. That's what I gathered.
+Client: Yeah. I got a DUI, and I was speeding, uh, during the DUI, obviously.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": [],
+"experience_frames": [],
+"improvement_plan": []
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI."],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [],
+"improvement_plan": []
+}
+
+### Utterance
+Counselor: Um, and also, if there's any-any-any information that you need from me, please, um, feel free to ask. Um, that the reason that he asked you to come in was because of the blood alcohol level was 2.8.
+Client: Okay.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI."],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8."],
+"effect": []
+}],
+"improvement_plan": []
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two"],
+"harm_effect": [],
+"necessity_to_improve": ["problem_and_trouble-1&2"]
+}],
+"problem_and_trouble_links": [],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks"],
+"effect": []
+}],
+"improvement_plan": []
+}
+
+### Utterance
+Counselor: Right.
+Client: I-I don't know if I would consider myself alcoholic. You know, I just, uh, um, you know, again, it was poor judgment.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic"],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment"],
+"effect": []
+}],
+"improvement_plan": []
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks"],
+"harm_effect": ["Drinking doesn’t get in the way of life."],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+}],
+"improvement_plan": []
+}
+
+### Utterance
+Counselor: Yeah. Oh, okay. So-so, what about that? The-- Is there other incidences that you could think of that seems, uh, um, alcohol was there, and then your luck just sorta took a-a turn, or it was just those two times?
+Client: Um, you know, I don't really, um-- I-I don't really, uh, get into a situation where I-I-I drink too much. Um, you know, again, I-I realize it's my second DUI, but,, um, uh-uh, it isn't something that, um, is like a normal everyday process for me.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks"],
+"harm_effect": ["Drinking doesn’t get in the way of life."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+}],
+"improvement_plan": []
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem."],
+"confidence_to_achive": []
+}]
+}
+
+### Utterance
+Counselor: So, it sounds like you've already been thinking about, uh, ways to-to get around safely.
+Client: Yeah. Yeah, or I can just stay home probably too. If I was gonna drink, I could probably stay home, then I wouldn't get in trouble either.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": []
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem."],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble."],
+"detail": [],
+"confidence_to_achive": []
+}]
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem."],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+}]
+}
+
+### Utterance
+Counselor: Yeah, good. That sounds good. Mike, has there even been, if any, um, a time in your life when you've thought about, um, not drinking at all?
+Client: For my first DUI, I did, uh-- I didn't drink at all for about six months. And, um, I-I-I just didn't think that, um, I really had a problem with it, so, you know, I-I did start drinking again. But, you know, again, it wasn't uh-- You know, it was a little different last time, because I was drinking a little more last time than, you know, now. I don't really drink as-as much as I used to drink, you know, um, and, you know, after you know, I quit for six months, so I kind of knew that I didn't really have a problem.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-2"],
+"content": ["Not drinking at all."],
+"detail": [],
+"effect": ["I stopped drinking for six months without any problems, so I started drinking again."]
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem."],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+}]
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-2"],
+"content": ["Not drinking at all."],
+"detail": ["I quit hanging out with friends to keep my relationship with my girlfriend.", "I started drinking again around the time my relationship ended."],
+"effect": ["I stopped drinking for six months without any problems, so I started drinking again.", "My friends didn't really hang out with me too much."]
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 3,
+"link_frame_type_and_index": [],
+"content": ["Relationship with my girlfriend"],
+"detail": ["I felt controlled by her, which felt strange, so we decided to break up."],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem."],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+}]
+}
+
+### Utterance
+Counselor: So, in-in what ways has, uh, drinking, um, sort of, uh-- What is kind of the good things about drinking since those couple of- those couple of years, and then-then maybe not so good things?
+Client: I don't really know that I can really compare good or bad. I just, uh-- You know, I just drink to be social, you know, I don't know that it really changes anything about me. It just, uh-- You know, I just drink to be social, you know.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life.", "I don’t know if drinking is good or bad; I just drink socially, and it doesn’t really change me."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-2"],
+"content": ["Not drinking at all."],
+"detail": ["I quit hanging out with friends to keep my relationship with my girlfriend.", "I started drinking again around the time my relationship ended."],
+"effect": ["I stopped drinking for six months without any problems, so I started drinking again.", "My friends didn't really hang out with me too much."]
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 3,
+"link_frame_type_and_index": [],
+"content": ["Relationship with my girlfriend"],
+"detail": ["I felt controlled by her, which felt strange, so we decided to break up."],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem."],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+}]
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": []},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life.", "I don’t know if drinking is good or bad; I just drink socially, and it doesn’t really change me."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-2"],
+"content": ["Not drinking at all."],
+"detail": ["I quit hanging out with friends to keep my relationship with my girlfriend.", "I started drinking again around the time my relationship ended."],
+"effect": ["I stopped drinking for six months without any problems, so I started drinking again.", "My friends didn't really hang out with me too much."]
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 3,
+"link_frame_type_and_index": [],
+"content": ["Relationship with my girlfriend"],
+"detail": ["I felt controlled by her, which felt strange, so we decided to break up.", "As soon as my girlfriend left, I could go out with friends again.", "she didn't want me going out with friends.", "After my first DUI, I tried to repair my relationship with my girlfriend, but it didn’t work.","I think she just wanted to control me and I was tired of being controlled."],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem."],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+}]
+}
+
+### Utterance
+Counselor: Since the co- the court sent you and we have to sort of explore what would happen if you went out and did this again.
+Client: Yeah. Well, I mean I-I, uh- I, uh- I wouldn't drink as much, and if I- if I did, I would call, uh, a taxi or, um, you know, get some kind of a ride home, I think, 'cause, uh, you know, I just, uh-- I-I just don't wanna get in trouble, you know.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": ["I wouldn't drink as much."]},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life.", "I don’t know if drinking is good or bad; I just drink socially, and it doesn’t really change me."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-2"],
+"content": ["Not drinking at all."],
+"detail": ["I quit hanging out with friends to keep my relationship with my girlfriend.", "I started drinking again around the time my relationship ended."],
+"effect": ["I stopped drinking for six months without any problems, so I started drinking again.", "My friends didn't really hang out with me too much."]
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 3,
+"link_frame_type_and_index": [],
+"content": ["Relationship with my girlfriend"],
+"detail": ["I felt controlled by her, which felt strange, so we decided to break up.", "As soon as my girlfriend left, I could go out with friends again.", "she didn't want me going out with friends.", "After my first DUI, I tried to repair my relationship with my girlfriend, but it didn’t work.","I think she just wanted to control me and I was tired of being controlled."],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem.", "if I drank, I would take a taxi or another ride home"],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+}]
+}
+
+---
+
+### Current_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": ["I wouldn't drink as much."]},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life.", "I don’t know if drinking is good or bad; I just drink socially, and it doesn’t really change me."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-2"],
+"content": ["Not drinking at all."],
+"detail": ["I quit hanging out with friends to keep my relationship with my girlfriend.", "I started drinking again around the time my relationship ended."],
+"effect": ["I stopped drinking for six months without any problems, so I started drinking again.", "My friends didn't really hang out with me too much.", "During the six months of not drinking, I had no friends around and felt isolated and uncomfortable."]
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 3,
+"link_frame_type_and_index": [],
+"content": ["Relationship with my girlfriend"],
+"detail": ["I felt controlled by her, which felt strange, so we decided to break up.", "As soon as my girlfriend left, I could go out with friends again.", "she didn't want me going out with friends.", "After my first DUI, I tried to repair my relationship with my girlfriend, but it didn’t work.","I think she just wanted to control me and I was tired of being controlled."],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem.", "if I drank, I would take a taxi or another ride home"],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 4,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Decide in advance who can give you a ride if you drink."],
+"detail": ["Consider this before going out drinking."],
+"confidence_to_achive": []
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 5,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Put money in my wallet for a taxi."],
+"detail": ["Put the bar money in the front pocket."],
+"confidence_to_achive": ["It'd probably be my wallet for a while."]
+}]
+}
+
+### Utterance
+Counselor: Would there be something else that would, um, sort of, uh, fill in that-- The-the friends area, do you think?
+Client: Well, I don't know. I mean, it's a-- I mean, my friends drink though. So, it's kinda hard to- it's kinda hard to, you know, to be with them, and then-- When I'm not drinking, 'cause it's-- I just don't feel like I fit in, you know.
+
+### Updated_structure
+{
+"goal_and_ideal_frame": {"frame_type": "goal_and_ideal",
+"content": ["I wouldn't drink as much."]},
+"problem_and_trouble_frames": [{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 1,
+"content": ["Driving under the influence", "DUI"]
+"detail": ["When I drove under the influence, I also committed a speeding violation."],
+"harm_effect": [],
+"necessity_to_improve": ["I don’t want to lose my license or my job, since I sell cars for a living.", "I don't lose my job."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 2,
+"content": ["Drinking"]
+"detail": ["The last time I drank was the night I got a DUI.", "Normally I drink one or two","I’m not sure if I’m an alcoholic", "I don't really drink on a normal basis.", "Gets in trouble after drinking more than a couple of drinks", "I usually drink socially, typically at events, and that’s when I might have more than one or two."],
+"harm_effect": ["Drinking doesn’t get in the way of life.", "I don’t know if drinking is good or bad; I just drink socially, and it doesn’t really change me."],
+"necessity_to_improve": ["I usually have just one or two drinks and then stop, so drinking hasn’t become a problem in my life."]
+},
+{
+"frame_type": "problem_and_trouble",
+"type_instnace_index": 3,
+"content": ["had bad luck"]
+"detail": [],
+"harm_effect": [],
+"necessity_to_improve": []
+}],
+"problem_and_trouble_links": ["problem_and_trouble-1&2"],
+"experience_frames": [{
+"frame_type": "experience",
+"type_instnace_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1", "problem_and_trouble-2"],
+"content": ["DUI arrest"],
+"detail": ["Blood alcohol level at arrest was 2.8.", "Had too much to drink at a friend’s birthday party.", "Had 5 or 6 drinks", "it was poor judgment", "Had two DUI incidents", "Gets in trouble after drinking more than a couple of drinks"],
+"effect": []
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-2"],
+"content": ["Not drinking at all."],
+"detail": ["I quit hanging out with friends to keep my relationship with my girlfriend.", "I started drinking again around the time my relationship ended."],
+"effect": ["I stopped drinking for six months without any problems, so I started drinking again.", "My friends didn't really hang out with me too much.", "During the six months of not drinking, I had no friends around and felt isolated and uncomfortable."]
+},
+{
+"frame_type": "experience",
+"type_instnace_index": 3,
+"link_frame_type_and_index": [],
+"content": ["Relationship with my girlfriend"],
+"detail": ["I felt controlled by her, which felt strange, so we decided to break up.", "As soon as my girlfriend left, I could go out with friends again.", "she didn't want me going out with friends.", "After my first DUI, I tried to repair my relationship with my girlfriend, but it didn’t work.","I think she just wanted to control me and I was tired of being controlled."],
+"effect": []
+}],
+"improvement_plan": [{
+"frame_type": "improvement_plan",
+"type_instance_index": 1,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Taking a taxi"],
+"detail": ["Taking a taxi would help me avoid this problem.", "if I drank, I would take a taxi or another ride home"],
+"confidence_to_achive": []
+}, 
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 2,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Staying home to drink would keep me out of trouble.", "I’ll have people come over instead of going out."],
+"detail": ["Having people drink at my house is fine."],
+"confidence_to_achive": ["I think it will work"]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 3,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["stop driving after drinking."],
+"detail": [],
+"confidence_to_achive": []
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 4,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Decide in advance who can give you a ride if you drink."],
+"detail": ["Consider this before going out drinking."],
+"confidence_to_achive": []
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 5,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Put money in my wallet for a taxi."],
+"detail": ["Put the bar money in the front pocket."],
+"confidence_to_achive": ["It'd probably be my wallet for a while."]
+},
+{
+"frame_type": "improvement_plan",
+"type_instance_index": 6,
+"link_frame_type_and_index": ["problem_and_trouble-1"],
+"content": ["Stop drinking"],
+"detail": [],
+"confidence_to_achive": ["I’m not sure if I’ll stop drinking; I feel left out if I don’t."]
+}]
+}
+
+--- Examples End ---

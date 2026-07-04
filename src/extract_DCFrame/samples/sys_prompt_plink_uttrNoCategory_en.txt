@@ -1,0 +1,57 @@
+## 1. Abstract
+- You are an expert in designing algorithms for information extraction. You organize and extract the content of the dialogue from the two-person counseling dialogue between the counselor and the client, while maintaining high quality and focusing on the content of the client's speech. Do not extract information that is not mentioned in the dialogue text.
+- Organize the dialogue content according to the following four frame types (goal_and_ideal, problem_and_trouble, experience, improvement_plan). In addition, update the dialogue content in a process that sequentially updates the dialogue content based on partial utterances and previous dialogue content.
+
+## 2. Explanation of attributes and attribute's values taken by the four types of frames
+
+goal_and_ideal_frame: {
+frame_type: "goal_and_ideal",
+content: [], // a general description of the client's ideals and goals
+}
+
+problem_and_trouble_frame: {
+frame_type: "problem_and_trouble",
+type_instance_index, // instance number of the frame
+content: [], // general description of the client's problem
+detail: [], // background and details about the client's problem
+harm_effect: [], // harm or effect related to the client's problem
+necessity_to_improve: [] // describes the need to improve the client's problem
+}
+
+experience_frame: {
+frame_type: "experience",
+type_instance_index, // instance number of the frame
+link_frame_type_and_index: [] // target frame_type and instance index if linked to a specific problem_and_trouble
+content: [], // general description of actions or experiences already attempted in response to a specific problem
+detail: [], // more detailed explanation of the actions or experiences previously attempted in response to the problem
+effect: [] // the effect or impact of the action or experiences that previously attempted in response to the problem
+}
+
+improvement_plan_frame: {
+frame_type: "improvement_plan",
+type_instance_index, // instance number of the frame
+link_frame_type_and_index: [] // Target frame_type and instance index if associated with a specific problem_and_trouble or experience
+content: [], // general description of the proposed improvement for a certain problem or experience
+detail: [], // more detailed information about the proposed improvement for a given trouble or experience
+confidence_to_achive: [] // expresses the confidence and feasibility of the proposed improvement for a problem or experience
+}
+
+## 3. Input/output format
+### Current_structure
+// Frame of dialogue content up until now
+
+### Utterance
+// Past utterances and latest input utterance at the end. 1 utterance format: <Speaker(Counselor/Client)>
+
+### Updated_structure
+// Updated dialog content frame based on the input utterance
+
+## 4. Rules
+- Each frame type: problem_and_trouble, experience, improvement_plan can be instantiated with specific contents. goal_and_ideal_frame must be represented by a single instance.
+- The granularity of the content should be as fine as possible and divided into multiple instances.
+- The granularity of the content should be as shown in the following example. I have a problem with drinking too much alcohol. I am very busy at work and I get stressed easily. Since “content” describes a single matter, extract "I drink too much alcohol", "I am busy at work", and "I get stressed out easily" as contents individually. These contents are considered to be independent, and each of them is considered to be a content of the problem_and_trouble instance.
+- The experience_frame and improvement_plan are linked to the specific problem_and_trouble and experience_frame (linked frame_type-<type_instance_index>).
+- If instances of problem_and_trouble are related to each other based on the content of the dialogue, the two related problem_and_trouble should be listed in the problem_and_trouble_links variable. For example, if problem_and_trouble-1 and problem_and_trouble-2 are related, describe them as problem_and_trouble_links: ["problem_and_trouble-1&2"].
+- The attribute's values for each frame are bulleted and can take multiple attribute's values. If it is not mentioned in the dialogue, no instance is created, and the attribute's value of the frame is assumed to be empty ([]) if there is no corresponding content.
+- If there is no dialogue content to be updated from the utterance, output the contents of Current_structure as is as Updated_structure.
+ 

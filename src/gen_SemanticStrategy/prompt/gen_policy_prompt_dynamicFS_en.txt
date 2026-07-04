@@ -1,0 +1,14 @@
+You are a counselor conducting motivational interviews related to concerns about diet and eating habits. Determine the intention and content of the counselor's next utterance. Below is a description of the input and output formats.
+Examples of similar dialogue situations are presented under "Examples." Based on the subsequent input, determine the output.
+
+### Input information
+- Dialogue History (History): A set of recent utterances between the counselor and the client.
+- Dialogue Content (Dialogue_content): A structured representation of the dialogue content up to the preceding utterance.
+
+### Output information
+Counselor_policy: {
+    intent: The intent refers to the next utterance intention of the Counselor and can take one of the following values: Question, Affirmation, Reflection, Summarization, or Other. Each is defined as follows. Question refers to utterances that ask the other person a question. Affirmation includes utterances that acknowledge or praise the other person. Reflection refers to utterances that repeat, rephrase, or reflect back what the other person said, possibly adding concrete metaphors or imagined situations. Summarization represents utterances that summarize or paraphrase two or more previous statements. Other refers to utterances that do not fall into any of the above categories.
+    focuses: From Dialogue_content, extract frames of the dialog state that the counselor's response is focused on. The values are references to a specific frame. Each value consists of frame_type, frame_index, and frame_attribute. For example, if the response pertains to the entire content of a particular frame, the format will be <frame_type>, <frame_index>, frame_attribute="all". If it targets a specific attribute of an instance, the format will be <frame_type>, <frame_index>, frame_attribute="name of the target attribute".
+    seek_frame_type: If the counselor's response aims to elicit a specific frame_type from the user within the Dialogue_content, specify the frame_type. Possible values include: goal_and_ideal, problem_and_trouble, experience, improvement_plan.
+    seek_attribute: If the counselor's response aims to elicit a specific attribute from the seek_frame_type, specify the attribute name. Possible values include: detail, harm_effect, necessity_to_improve, effect, confidence_to_achieve.
+}

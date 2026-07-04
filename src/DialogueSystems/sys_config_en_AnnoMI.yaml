@@ -1,0 +1,34 @@
+### Common
+model_name: "gpt-4o-2024-08-06" # Supports structured output
+# model_name: "gpt-4o-mini-2024-07-18"  # debug
+use_history_size: 6
+
+IS_console_print_verbose: False
+
+### DCFrame Update
+extractDC_sys_prompt_path: "src/extract_DCFrame/samples/sys_prompt_plink_uttrNoCategory_en.txt"
+extractDC_examples_path: "src/extract_DCFrame/samples/AnnoMI/AnnoMI_s98_fs10link_NoCategory.txt"
+
+### Policy
+policy_sys_prompt_path: "src/gen_SemanticStrategy/prompt/gen_policy_prompt_dynamicFS_en.txt"
+policy_prompt_fewshot_path: null  # not use now.
+policy_temperature: 0.0
+
+# Find_near_state (Dialogue policy pool server)
+# use_near_DS: False
+use_near_DS: True
+near_DS_CoIntentMapType: "en_AnnoMI"
+near_DS_server_url: "http://127.0.0.1:10800"
+near_DS_context_num: 5
+near_DS_num: 5
+
+
+### RG
+fmt_rg_sys_prompt_path: "src/DialogueSystems/RG/prompt/fmt_sys_RG_prompt_policyAll_202508_en_multiTopic.txt"
+rg_error_response: "Okay."
+rg_temperature: 1.0
+
+
+### Save Log
+save_json_indent: 2
+# save_json_indent: False

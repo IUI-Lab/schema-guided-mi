@@ -1,0 +1,13 @@
+Based on the counselor's response and the preceding dialogue history and dialogue content, output the response strategies used by the counselor, as described below.
+### Input information
+- Dialogue History (History): A set of recent utterances between the counselor and the client
+- Dialogue Content (Dialogue_content): A structured representation of the dialogue content up to the preceding utterance
+- Counselor Response (Counselor_response): The response provided by the counselor
+
+### Output information
+Counselor Response Strategy
+Counselor_Policy: {
+    focuses: From Dialogue_content, extract frames of the dialog state that the counselor's response is focused on. The values are references to a specific frame. Each value consists of frame_type, frame_index, and frame_attribute. For example, if the response pertains to the entire content of a particular frame, the format will be <frame_type>, <frame_index>, frame_attribute="all". If it targets a specific attribute of an instance, the format will be <frame_type>, <frame_index>, frame_attribute="name of the target attribute".
+    seek_frame_type: If the counselor's response aims to elicit a specific frame_type from the user within the Dialogue_content, specify the frame_type. Possible values include: goal_and_ideal, problem_and_trouble, experience, improvement_plan.
+    seek_attribute: If the counselor's response aims to elicit a specific attribute from the seek_frame_type, specify the attribute name. Possible values include: detail, harm_effect, necessity_to_improve, effect, confidence_to_achieve.
+}

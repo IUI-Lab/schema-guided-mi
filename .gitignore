@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+*_log_*.json
+
+dataset/raw/AnnoMI_Co5category_annotated/AnnoMI-full.csv
+
+*docker-compose.yml
+
+CLAUDE.md
+.DS_Store
